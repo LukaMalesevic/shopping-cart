@@ -31,6 +31,7 @@ body{
     box-sizing: border-box;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .container{
@@ -161,14 +162,16 @@ footer > h1:hover{
 .shop-container{
     background-color: rgb(255, 240, 219);
     width: 100%;
-    min-height: 532px;
+    min-height: 550px;
     display: flex;
-    padding: 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 50px 50px 150px 50px;
     box-sizing: border-box;
 }
 
 .shop-title-bg{
-    background-image: url(../public/images/tate.jpg);
+    background-image: url(/images/tate.jpg);
     height: 200px;
     width: 100%;
     display: flex;
@@ -178,4 +181,106 @@ footer > h1:hover{
     font-size: 3rem;
     background-size: cover;
     background-position-y: 20%;
+}
+
+.drop-down{
+    position: absolute;
+    top: 10px;
+    left: -180%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 500px;
+    transition: 0.2s;
+    display: none;
+}
+
+.drop-down-btn{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 100px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(47, 79, 79, 0.719); 
+    transition: 0.2s;
+    height: 75px;
+}
+
+.drop-down-btn:hover{
+    color: black;
+    background-color: white;
+}
+
+.categories-btn{
+    position: relative;
+}
+
+.item{
+    width: 344px;
+    height: 475px;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+}
+
+.item-image{
+    min-width: 100%;
+    min-height: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: aquamarine; */
+}
+
+.item-status{
+    min-width: 100%;
+    min-height: 3%;
+    /* background-color:aqua; */
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+}
+
+.item-status > h1{
+    font-size: 2rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-block: 5px;
+}
+
+.item-status > h2{
+    font-weight: 400;
+    font-size: 2rem;
+    margin-block: 5px;
+    color: grey;
+}
+
+.add-to-cart-btn{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: darkslategrey;
+    border-radius: 5px;
+}
+
+.cart-container{
+    position: absolute;
+    width: 500px;
+    height: 100vh;
+    background-color: aqua;
+    right: 0;
+    z-index: 2;
+}
+
+i{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+i:hover{
+    transform: scale(1.2);
 }

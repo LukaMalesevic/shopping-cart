@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Home(){
     return(
         <>
-        <Navigation/>
+        <Navigation />
         <div className="home-container">
             <div className="model-bg"></div>
             <h1>Modern Clothing</h1>
