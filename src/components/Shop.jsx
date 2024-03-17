@@ -69,7 +69,11 @@ export default function Shop(props){
                     id={item.id} 
                     title={item.title} 
                     price={item.price}
-                    image={item.image}></Item>
+                    image={item.image}
+                    cartItems={props.cartItems}
+                    nextCartItems={props.nextCartItems}
+                    data={data}>
+                    </Item>
                 ))}
             </div>
             <Footer style={cartStyle}/>

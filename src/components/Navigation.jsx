@@ -20,6 +20,11 @@ export default function Navigation(props){
     if(dropDownState){
         dropDownStyle.display = 'flex'
     }
+
+    let sumOfItems = 0;
+    props.cartItems.forEach(item => {
+        return sumOfItems += item.count;
+    });
     return(
         <div style={props.style} className="nav-bar">
             <div className="logo">
@@ -42,7 +47,7 @@ export default function Navigation(props){
             <i className="fa-solid fa-magnifying-glass"></i>
             <i className="fa-regular fa-user"></i>
             <i onClick={() => props.nextCart(true)} className="fa-solid fa-cart-shopping relative">
-                <div className="items-circle">0</div>
+                <div className="items-circle">{sumOfItems}</div>
             </i>
             </div>
         </div>
